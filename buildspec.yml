@@ -16,10 +16,10 @@ phases:
     on-failure: ABORT
     runtime-versions:
       nodejs: latest
-      yarn: latest
   pre_build:
     on-failure: ABORT
     commands:
+      - npm install -g yarn
       - yarn
   build:
     on-failure: ABORT
