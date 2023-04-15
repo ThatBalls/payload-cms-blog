@@ -1,0 +1,27 @@
+version: 0.2
+
+run-as: sleierer
+
+env:
+  shell: bash
+
+batch:
+  fast-fail: false
+  # build-list:
+  # build-matrix:
+  # build-graph:
+        
+phases:
+  install:
+    on-failure: ABORT
+    runtime-versions:
+      nodejs: latest
+      yarn: latest
+  pre_build:
+    on-failure: ABORT
+    commands:
+      - yarn
+  build:
+    on-failure: ABORT
+    commands:
+      - yarn build
