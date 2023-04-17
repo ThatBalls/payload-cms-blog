@@ -8,16 +8,16 @@ files:
 hooks:
   ApplicationStop:
     - location: scripts/app-stop.sh
-      timeout: 300
+      timeout: 60
 
   BeforeInstall:
     - location: scripts/before-install.sh
-      timeout: 300
+      timeout: 60
 
   AfterInstall:
     - location: scripts/after-install.sh
-      timeout: 300
+      timeout: 60
 
   ApplicationStart:
     - location: scripts/app-start.sh
-      timeout: 300
+      timeout: 60
