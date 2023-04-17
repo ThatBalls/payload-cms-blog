@@ -1,0 +1,2 @@
+screen -r payload;
+exit;
