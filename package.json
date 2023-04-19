@@ -13,7 +13,7 @@
     "copyfiles": "copyfiles -u 1 \"src/**/*.{html,css,scss,ttf,woff,woff2,eot,svg,jpg,png}\" dist/",
     "generate:types": "cross-env PAYLOAD_CONFIG_PATH=src/payload.config.ts payload generate:types",
     "generate:graphQLSchema": "PAYLOAD_CONFIG_PATH=src/payload.config.ts payload generate:graphQLSchema",
-    "pm2:serve": "pm2 start yarn --name payload -- serve; yarn pm2 save",
+    "pm2:serve": "pm2 start yarn --interpreter bash --name payload -- serve; yarn pm2 save",
     "pm2:stop": "pm2 stop payload; pm2 delete payload"
   },
   "dependencies": {
