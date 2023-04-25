@@ -50,9 +50,6 @@ const Builds: CollectionConfig = {
       name: 'category',
       type: 'relationship',
       relationTo: 'categories',
-      admin: {
-        readOnly: true,
-      },
     },
     {
       name: 'tags',
