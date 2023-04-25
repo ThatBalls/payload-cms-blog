@@ -1,4 +1,5 @@
 import { CollectionConfig, Block } from 'payload/types';
+import payload from "payload";
 
 const LevelBlock: Block = {
     slug: "LevelBlock",
@@ -48,7 +49,18 @@ const Builds: CollectionConfig = {
     {
       name: 'category',
       type: 'relationship',
-      relationTo: 'categories'
+      relationTo: 'categories',
+      admin: {
+        readOnly: true,
+      },
+      defaultValue: payload.find({
+        collection: "categories",
+        where: {
+          name: {
+            like: "builds"
+          }
+        }
+      })
     },
     {
       name: 'tags',

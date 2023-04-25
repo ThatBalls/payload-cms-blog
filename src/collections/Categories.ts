@@ -13,6 +13,10 @@ const Categories: CollectionConfig = {
       name: 'name',
       type: 'text',
     },
+    {
+      name: "slug",
+      type: "text",
+    },
   ],
   timestamps: false,
 }
