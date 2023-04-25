@@ -3,7 +3,7 @@ import { CollectionConfig } from 'payload/types';
 const Posts: CollectionConfig = {
   slug: 'pages',
   admin: {
-    defaultColumns: ['title', 'author', 'category', 'tags', 'status'],
+    defaultColumns: ['title', 'author'],
     useAsTitle: 'title',
   },
   access: {
