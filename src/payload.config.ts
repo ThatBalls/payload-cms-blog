@@ -3,6 +3,7 @@ import path from 'path';
 import Builds from "./collections/Builds";
 import Categories from './collections/Categories';
 import Media from "./collections/Media";
+import Pages from "./collections/Pages";
 import Posts from './collections/Posts';
 import Tags from './collections/Tags';
 import Users from './collections/Users';
@@ -14,6 +15,7 @@ export default buildConfig({
   collections: [
     Builds,
     Media,
+    Pages,
     Categories,
     Posts,
     Tags,
