@@ -53,14 +53,6 @@ const Builds: CollectionConfig = {
       admin: {
         readOnly: true,
       },
-      defaultValue: payload.find({
-        collection: "categories",
-        where: {
-          name: {
-            like: "builds"
-          }
-        }
-      })
     },
     {
       name: 'tags',
