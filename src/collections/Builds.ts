@@ -18,7 +18,7 @@ const Builds: CollectionConfig = {
   slug: 'builds',
   admin: {
     defaultColumns: ['title', 'author', 'category', 'tags', 'status'],
-    useAsTitle: 'name',
+    useAsTitle: 'title',
   },
   access: {
     read: () => true,
