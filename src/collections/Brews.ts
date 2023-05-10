@@ -16,9 +16,20 @@ const Brews: CollectionConfig = {
       required: true,
     },
     {
+      name: "description",
+      type: "text",
+      required: true,
+    },
+    {
       name: 'author',
       type: 'relationship',
       relationTo: 'users',
+    },
+    {
+      name: "slug",
+      type: "text",
+      required: true,
+      unique: true,
     },
     {
       name: "externalUrl",
