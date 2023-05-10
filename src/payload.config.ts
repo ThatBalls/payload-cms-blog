@@ -1,5 +1,6 @@
 import { buildConfig } from 'payload/config';
 import path from 'path';
+import Brews from './collections/Brews';
 import Builds from "./collections/Builds";
 import Categories from './collections/Categories';
 import Media from "./collections/Media";
@@ -13,6 +14,7 @@ export default buildConfig({
     user: Users.slug,
   },
   collections: [
+    Brews,
     Builds,
     Media,
     Pages,
