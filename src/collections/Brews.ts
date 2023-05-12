@@ -16,9 +16,17 @@ const Brews: CollectionConfig = {
       required: true,
     },
     {
+      name: "metaTitle",
+      type: "text"
+    },
+    {
       name: "description",
       type: "text",
       required: true,
+    },
+    {
+      name: "metaDescription",
+      type: "text"
     },
     {
       name: 'author',
