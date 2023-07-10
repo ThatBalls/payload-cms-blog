@@ -1,4 +1,5 @@
 import { CollectionConfig } from 'payload/types';
+import validateAfterChange from '../hooks/validateAfterChange';
 
 const Brews: CollectionConfig = {
   slug: 'brews',
@@ -54,6 +55,11 @@ const Brews: CollectionConfig = {
       },
     },
   ],
+  hooks: {
+    afterChange: [
+      validateAfterChange
+    ]
+  }
 }
 
 export default Brews;

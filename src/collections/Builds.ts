@@ -1,5 +1,5 @@
 import { CollectionConfig, Block } from 'payload/types';
-import payload from "payload";
+import validateAfterChange from '../hooks/validateAfterChange';
 
 const LevelBlock: Block = {
     slug: "LevelBlock",
@@ -132,6 +132,11 @@ const Builds: CollectionConfig = {
     }
   ],
   timestamps: false,
+  hooks: {
+    afterChange: [
+      validateAfterChange
+    ]
+  }
 }
 
 export default Builds;
