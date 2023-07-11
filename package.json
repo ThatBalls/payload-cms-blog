@@ -17,6 +17,7 @@
     "pm2:stop": "pm2 stop payload; pm2 delete payload"
   },
   "dependencies": {
+    "@payloadcms/plugin-seo": "^1.0.14-canary.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "payload": "^1.7.2",

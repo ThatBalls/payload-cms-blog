@@ -30,10 +30,6 @@ const Builds: CollectionConfig = {
       type: 'text',
     },
     {
-      name: "metaTitle",
-      type: "text"
-    },
-    {
       name: "slug",
       type: "text"
     },
@@ -69,10 +65,6 @@ const Builds: CollectionConfig = {
     {
         name: 'shortDescription',
         type: 'text'
-    },
-    {
-      name: "metaDescription",
-      type: "text"
     },
     {
         name: "characterConcept",
