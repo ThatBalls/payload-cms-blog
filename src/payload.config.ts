@@ -32,10 +32,10 @@ export default buildConfig({
         "builds",
       ],
       uploadsCollection: 'media',
-      generateTitle: ({ doc }) => `Dire Dice — ${doc.title.value}`,
-      generateDescription: ({ doc }) => doc.shortDescription.value,
-      generateImage: ({ doc }) => doc.bannerImage.value,
-      generateURL: ({ doc }) => `https://www.diredice.com/${doc.collection.slug}${doc.slug.value}`,
+      generateTitle: ({ doc }: any) => `Dire Dice — ${doc.title.value}`,
+      generateDescription: ({ doc }: any) => doc.shortDescription.value,
+      generateImage: ({ doc }: any) => doc.bannerImage.value,
+      generateURL: ({ doc }: any) => `https://www.diredice.com/${doc.collection.slug}${doc.slug.value}`,
     })
   ],
   typescript: {
