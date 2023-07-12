@@ -8,6 +8,7 @@ import Pages from "./collections/Pages";
 import Posts from './collections/Posts';
 import Tags from './collections/Tags';
 import Users from './collections/Users';
+import seo from '@payloadcms/plugin-seo';
 
 export default buildConfig({
   admin: {
@@ -22,6 +23,20 @@ export default buildConfig({
     Posts,
     Tags,
     Users,
+  ],
+  plugins: [
+    seo({
+      collections: [
+        "pages",
+        "brews",
+        "builds",
+      ],
+      uploadsCollection: 'media',
+      generateTitle: ({ doc }: any) => `Dire Dice — ${doc.title.value}`,
+      generateDescription: ({ doc }: any) => doc.shortDescription.value,
+      generateImage: ({ doc }: any) => doc.bannerImage.value,
+      generateURL: ({ doc }: any) => `https://www.diredice.com/${doc.collection.slug}${doc.slug.value}`,
+    })
   ],
   typescript: {
     outputFile: path.resolve(__dirname, 'payload-types.ts')
